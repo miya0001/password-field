@@ -2,9 +2,10 @@
   "name": "password-field",
   "version": "1.0.0",
   "description": "",
-  "main": "src/PasswordField.js",
+  "main": "dist/PasswordField.js",
   "scripts": {
     "build": "babel src -d dist",
+    "prepare": "babel src -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
