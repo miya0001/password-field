@@ -1,3 +1,3 @@
-# password-field
+# <PasswordField />
 
 ![](screenshot.gif)

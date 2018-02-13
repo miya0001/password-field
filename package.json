@@ -2,7 +2,7 @@
   "name": "password-field",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "src/PasswordField.js",
   "scripts": {
     "build": "babel src -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
