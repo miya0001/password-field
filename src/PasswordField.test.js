@@ -1,11 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { expect } from 'chai';
+import { shallow, mount } from 'enzyme';
+import sinon from 'sinon';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import PasswordField from './PasswordField';
 
-// See https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#testing-components
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<MuiThemeProvider><PasswordField id="password" /></MuiThemeProvider>, div);
-  ReactDOM.unmountComponentAtNode(div);
+  const wrapper = mount(<MuiThemeProvider><PasswordField id="hello" name="world" /></MuiThemeProvider>);
+  expect(wrapper.find("input").length).to.equal(1);
+  // `<PasswordField />` is one of the children for `<MuiThemeProvider />`.
+  // So it needs `.children.props` to get props.
+  expect(wrapper.props().children.props.id).to.equal("hello");
+  expect(wrapper.props().children.props.name).to.equal("world");
 });
