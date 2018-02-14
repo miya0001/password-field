@@ -12,6 +12,11 @@
 $ npm install password-field --save
 ```
 
+## Requires
+
+* React 16.x
+* Material-UI
+
 ## Usage
 
 ```html
@@ -36,3 +41,7 @@ And also, `PasswordField` has following custom properties.
 
 * iconColor - The color of icon to toggle visibility. It will be passed to [SVG Icon](http://www.material-ui.com/#/components/svg-icon) as the `color` property.
 * iConStyle - The style of icon to toggle visibility. It will be passed to [SVG Icon](http://www.material-ui.com/#/components/svg-icon) as the `color` property.
+
+## License
+
+MIT
