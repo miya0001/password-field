@@ -6,6 +6,7 @@ node_js:
 script:
 - npm test
 after_success:
+- rm -f screenshot.gif
 - npm run build
 deploy:
   provider: npm
