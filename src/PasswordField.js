@@ -36,9 +36,9 @@ class PasswordField extends Component {
       ...this.props.iconStyle
     }
 
-    let icon = <Hide color={this.props.iconColor} style={iconStyle} onClick={this.toggleVisibility} />
+    let icon = <Hide className="hide" color={this.props.iconColor} style={iconStyle} onClick={this.toggleVisibility} />
     if (this.state.visibility) {
-      icon = <Show color={this.props.iconColor} style={iconStyle} onClick={this.toggleVisibility} />
+      icon = <Show className="visible" color={this.props.iconColor} style={iconStyle} onClick={this.toggleVisibility} />
     }
 
     const props = {...this.props}

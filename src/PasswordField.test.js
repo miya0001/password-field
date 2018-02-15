@@ -21,6 +21,8 @@ it('renders without crashing', () => {
 
   expect(wrapper.find("input[type='text']").length).to.equal(0);
   expect(wrapper.find("input[type='password']").length).to.equal(1);
+  expect(wrapper.find("svg.hide").length).to.equal(1);
+  expect(wrapper.find("svg.visible").length).to.equal(0);
 });
 
 it('toggle visibility', () => {
@@ -34,4 +36,21 @@ it('toggle visibility', () => {
 
   expect(wrapper.find("input[type='text']").length).to.equal(1);
   expect(wrapper.find("input[type='password']").length).to.equal(0);
+  expect(wrapper.find("svg.hide").length).to.equal(0);
+  expect(wrapper.find("svg.visible").length).to.equal(1);
+});
+
+it('toggle visibility to be default', () => {
+  // Click to toggle visibility
+  wrapper.find('svg').simulate('click')
+
+  expect(wrapper.props().id).to.equal("hello");
+  expect(wrapper.props().name).to.equal("world");
+  expect(wrapper.state().visibility).to.equal(false);
+  expect(wrapper.state().inputType).to.equal('password');
+
+  expect(wrapper.find("input[type='text']").length).to.equal(0);
+  expect(wrapper.find("input[type='password']").length).to.equal(1);
+  expect(wrapper.find("svg.hide").length).to.equal(1);
+  expect(wrapper.find("svg.visible").length).to.equal(0);
 });
