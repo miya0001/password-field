@@ -5,14 +5,3 @@ node_js:
 - 6.11.1
 script:
 - npm test
-after_success:
-- rm -f screenshot.gif
-- npm run build
-deploy:
-  provider: npm
-  email: hatatatehaze@gmail.com
-  api_key:
-    secure: WcXVNJt/x9+ZhFNr7aCxKlcxyFyOzn1eEiBJlvrALxe9oZo36aHip5dAnfVO2+ArOLHu/DXO6SAk87lIQAKfioW9vEKfxxr1QnYWNZtChg5uMcwG/7g82HgcVBf/MRoXsPTso4ZGya8j6Fy7YD/8Dw3al7+gJtFqtqhr+YLUu/mAHK5FSqWS3xbaB1rd1GyomfdK7tXYsCrtafNSCjdgbX/DMQcgL3Ku2/laCUFhK7Srlrw9cyuUSurH8ioS0wKoQiNDZGW0tL2oA2XmUhwsHnza8yJgBcDg9WvIeYLcmIJT3MrKXd1lt9Lq6bzxrO7DcvymPTVw92bXUiiqkm5U9Ke9oVLV1Q5y8ReF5h/Oz0vtp5vcXsFLWO+jAsolPIYqMA0HGd/KKM6ynGkGrbCb1zueGel6LIAAVOAQjfW4n3HvkunOZ74eiVpBA+DsHsTrCmYlVdTDgtXy/Nii19zN1BZdbWLZ87eIirxOEjsjBW3R+CIczlTWTShKjU3HERdCNkY6j76eExERfCLTJKRzxektWkwF//QrDdapNjidWZgpnq8S+gk4uU0KWyhUNJhJBPEsfvazM8aNUO1JxurJ9KXDlRxeVJfhyNmpWl8hxpaIL2Ffxpi/QvessHeTHaztVgZYKSWjGX1hXdY2ZLKNdbPs3TgxieirkA1smJJhzEc=
-  on:
-    tags: true
-    repo: miya0001/password-field
