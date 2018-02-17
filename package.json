@@ -1,10 +1,11 @@
 {
   "name": "password-field",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "dist/PasswordField.js",
   "scripts": {
     "build": "babel src -d dist",
+    "prepare": "babel src -d dist",
     "test": "react-scripts test --env=jsdom"
   },
   "repository": {
