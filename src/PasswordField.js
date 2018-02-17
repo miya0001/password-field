@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TextField } from 'material-ui';
+import TextField from 'material-ui/TextField';
 import Show from 'material-ui/svg-icons/action/visibility';
 import Hide from 'material-ui/svg-icons/action/visibility-off';
 
